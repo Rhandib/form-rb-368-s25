@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Pet Rescue Survey</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Knewave&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  
+  <header>
+    <h1 id="title">Pet Rescue Survey</h1>
+    <p id="description">
+      Thank you for taking a few minutes to help us learn more about animal lovers like you! Your responses will help improve animal rescue services, support programs, and community outreach.
+    </p>
+  </header>
+
+  <main>
+    <form id="survey-form" method="POST" action="https://hotel-feedback.freecodecamp.org">
+      
+      <fieldset>
+        <legend>Information</legend>
+
+        <label for="name">Name (required):</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+        <label for="email">Email address (required):</label>
+        <input type="email" id="email" name="email" placeholder="name@example.com" required />
+
+        <label for="age">Age (required):</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" min="13" max="199" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Pets</legend>
+
+        <p>Do you currently have any pets?</p>
+        <label><input type="radio" name="pets" value="yes" /> Yes</label>
+        <label><input type="radio" name="pets" value="no" /> No</label>
+
+        <p>If yes, what kind(s) of pet(s) do you have? (Check all that apply)</p>
+        <label><input type="checkbox" name="pets-type" value="cat" /> Cat</label>
+        <label><input type="checkbox" name="pets-type" value="dog" /> Dog</label>
+        <label><input type="checkbox" name="pets-type" value="fish" /> Fish</label>
+        <label><input type="checkbox" name="pets-type" value="other" /> Other</label>
+
+        <p><label for="pet-source">How did you acquire your current pet(s)?</label></p>
+        <select name="pet-source" id="pet-source">
+          <option value="shelter">Adopted from a shelter/rescue</option>
+          <option value="breeder">Purchased from breeder/pet store</option>
+          <option value="gift">Gift</option>
+          <option value="other">Other</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Views on Rescue and Adoption</legend>
+
+        <label>Is animal rescue and adoption important to you?</label><br />
+        <label><input type="radio" name="importance" value="yes" /> Yes</label>
+        <label><input type="radio" name="importance" value="no" /> No</label>
+
+        <br /><label>Would you consider fostering an animal in the future?</label><br />
+        <label><input type="radio" name="foster" value="yes" /> Yes</label>
+        <label><input type="radio" name="foster" value="no" /> No</label>
+
+        <br /><label>What motivates you to support pet rescue? (Check all that apply)</label><br />
+        <label><input type="checkbox" name="motivation" value="love" /> Love for animals</label>
+        <label><input type="checkbox" name="motivation" value="death" /> Preventing euthanasia</label>
+        <label><input type="checkbox" name="motivation" value="karma" /> Good karma</label>
+        <label for="motivation-other">Other:</label>
+        <input type="text" id="motivation-other" name="motivation-other" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Volunteering and Donations</legend>
+
+        <label for="volunteer">Would you be interested in volunteering in the future?</label><br />
+        <select name="volunteer" id="volunteer">
+          <option value="yes">Yes, sign me up!</option>
+          <option value="nope">Nope, not for me.</option>
+          <option value="already">I already volunteer</option>
+        </select>
+
+        <br /><label for="donation">What would encourage you to donate or support an animal rescue group?</label><br />
+        <select name="donation" id="donation">
+          <option value="money">Knowing where my money goes</option>
+          <option value="death">Preventing euthanasia</option>
+          <option value="success">Seeing success stories</option>
+          <option value="points">Brownie points</option>
+        </select>
+          </fieldset>
+
+        <br>  <fieldset>
+        <legend>Final Thought</legend>
+
+   
+        <label for="comments">What do you think are the biggest challenges facing pet rescue organizations today?</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="70" placeholder="Comment here"></textarea>
+        <label for="comments">Is there anything else you’d like to share about your experience with pets or animal rescue?</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="70" placeholder="Comment here"></textarea>
+      </fieldset>
+
+      <div id="submit">
+        <button type="submit">Submit survey</button>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <p> Thank you! </p>
+  </footer>
+</body>
+</html>
